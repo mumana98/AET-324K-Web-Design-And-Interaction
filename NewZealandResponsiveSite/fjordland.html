@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html> 
+    <head>
+
+        <title>Travel New Zealand!</title>
+        <link rel="stylesheet" href="./css/nz-styles.css">
+        <script src="lightbox/js/jquery-1.7.2.min.js"></script>
+        <script src="galleria/galleria-1.2.8.min.js"></script>
+        <script src="galleria/themes/classic/galleria.classic.min.js"></script>
+
+        <style>
+
+                header {
+                    background-image: url("./images/NewZealand/milford-sound.jpg");
+                }
+                main {
+                    column-count: 1;
+                }
+                #galleria {
+                    width: 800px;
+                    height: 500px;
+                }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Fjordland</h1>
+            
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="bay-of-islands.html">Bay of Islands</a>
+            <a href="rotorua.html">Rotorua</a>
+            <a href="fjordland.html">Fjordland</a>
+        </nav>
+        <aside>
+            <p class="quote">Greg is awesome</p>
+            <p class="credit">&mdash;Greg Hervey</p>
+        </aside>
+        <main>
+            <h1>Example headline</h1>
+            <div id="galleria">
+                <a href="./images/NewZealand/milford-sound.jpg"><img data-description ="" src="./images/NewZealand/milford-sound.jpg"></a>
+                <a href="./images/NewZealand/sailboats.jpg"><img src="./images/NewZealand/sailboats.jpg"></a>
+                <a href="./images/NewZealand/hobbiton.jpg"><img src="./images/NewZealand/hobbiton.jpg"></a>
+            </div>
+        </main>
+        <footer>
+            <p>&copy;2019 New Zealand Ministry of Tourism</p>
+        </footer>
+        <script>
+            Galleria.loadTheme("galleria/themes/classic/galleria.classic.min.js");
+            Galleria.run("#galleria");
+        </script>
+    </body>
+</html>

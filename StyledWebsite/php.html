@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html class="no-js"> 
+    <head>
+
+        <title>5 Web Technologies</title>
+        <link rel="stylesheet" href="Styles.css">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="javascript.html">Javascript</a>
+            <a href="flash.html">Flash</a>
+            <a class="active" href="php.html">PHP</a>
+        </nav>
+        
+        <h1>Technologies behind the Web</h1>
+
+        <div id="box">
+            <h2>PHP</h2>
+            <p>
+                PHP HyperText Preprocessor is a scripting language that runs on a server. 
+                This language is the most common way data is moved between a web application 
+                (front end) and the server (back-end). Common examples include:
+            </p>
+            <ul>
+                <li>checking the validity of a password</li>
+                <li>emailing the contents of a contact form to a recipient</li>
+                <li>adding information entered on a web form to a database</li>
+                <li>assembling a web page based on user input</li>
+            </ul>
+
+            <code>
+                    &lt;?php <br>
+                    if ($_POST['sendRequest']) { <br>
+                     $sendTo = $_POST['destinationEmail']; <br>
+                     $subject = "Web inquiry"; <br>
+                     $message = $_POST['emailInquiry']; <br>
+                     mail($sendTo, $subject, $message); <br>
+                    } <br>
+                    ?&gt; 
+            </code>
+
+            <p>PHP drives most content management systems (like Drupal and WordPress). 
+                When you search for a book on Amazon.com, you don't land on an HTML page 
+                someone has created for that book; PHP pulls data from Amazon's database and arranges 
+                it in an HTML template.</p>
+            
+            <footer>
+                <a href="javascript.html">&larr;Previous</a>
+            </footer>
+
+        </div>
+
+        <script src="" async defer></script>
+    </body>
+</html>

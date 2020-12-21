@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+
+        <link href="https://fonts.googleapis.com/css?family=Oswald:200,700&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                margin: 0;
+            }
+            body {
+                font-family: Oswald, sans-serif;
+                background-color: #ddd;
+                display: grid;
+                min-height: 100vh;
+                place-items: center;
+                /* hides what is off screen or viewport so it wont scroll*/
+                overflow: hidden;
+            }
+            .thin {
+                font-weight: 200;
+            }
+            h1 {
+                font-size: 7em;
+                color: #888;
+            }
+            h2 {
+                font-size: 3em;
+                animation: expandorama .75s ease 3s;
+                animation-fill-mode: both;
+                white-space: nowrap;
+                width: 800px;
+                margin-left: -150px;
+                transform: rotate(5deg);
+            }
+            main {
+                background-color: #fff;
+                width: 500px;
+                height: 300px;
+                text-align: center;    
+                animation: box 2s;    
+                animation-delay: 1s;   
+                animation-fill-mode: both;    
+                position: relative;
+                transform: rotate(-5deg);
+            }
+
+            @keyframes flip {
+                0%{transform: scaleX(0);}
+                100%{transform: scaleX(1);}
+            }
+
+            span {
+                display: inline-block;
+                animation: flip .5s;
+                animation-fill-mode: both;
+            }
+
+            span:nth-child(2) {
+                animation-delay: .1s;
+            }
+            span:nth-child(3) {
+                animation-delay: .2s;
+            }
+            span:nth-child(4) {
+                animation-delay: .3s;
+            }
+            span:nth-child(5) {
+                animation-delay: .4s;
+            }
+            span:nth-child(6) {
+                animation-delay: .5s;
+            }
+
+            @keyframes box {
+                0%{background-color: #ddd;}
+                50%{background-color: #fff; box-shadow: 0 0 0 #333;}
+                100%{box-shadow: 0 0 30px #333;}
+            }
+
+            @keyframes expandorama {
+                0%{letter-spacing: -.3em; opacity: 0;}
+                100%{letter-spacing: .3em; opacity: 1;}
+                
+            }
+            
+            .track {
+                width: 1000px;
+                position: absolute;
+
+            }
+
+            .line {
+                width: 500px;
+                height: 1px;
+                background-color: #888;
+                animation: slide 1s linear 1.5s; /* 4s is the delay*/
+                animation-fill-mode: both;
+            }
+
+            #track-top {
+                top: 0;
+                left: -250px;
+            }
+
+            #track-bottom {
+                bottom: 0;
+                left: -250px;
+                transform: rotate(180deg);
+            }
+
+            #track-left {
+                left: 0;
+                bottom: 150px;
+                transform: rotate(90deg);
+            }
+
+            #track-right {
+                right: 0;
+                top: 150px;
+                transform: rotate(270deg);
+            }
+
+            @keyframes slide {
+                0%{margin-left: 0px; opacity: 0;}
+                30%{opacity: 1;}
+                70%{opacity: 1;}
+                100%{margin-left: 500px; opacity: 0;}
+                 
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <main>
+            <h1>
+                <span class="thin">A</span><span class="thin">E</span><span class="thin">T</span><span>3</span><span>2</span><span>4</span>
+            </h1>
+            <h2>Interactive HTML5</h2>
+            <div class="track" id="track-top">
+                <div class="line"></div>
+            </div>
+            <div class="track" id="track-bottom">
+                <div class="line"></div>
+            </div>
+            <div class="track" id="track-left">
+                <div class="line"></div>
+            </div>
+            <div class="track" id="track-right">
+                <div class="line"></div>
+            </div>
+        </main>
+        <script src="" async defer></script>
+    </body>
+</html>

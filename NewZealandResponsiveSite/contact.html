@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html> 
+    <head>
+
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="./css/nz-styles.css">
+
+        <style>
+
+                header {
+                    background-image: url("./images/NewZealand/sheep.jpg");
+                }
+                main {
+                    column-count: 1;
+                }
+                #galleria {
+                    width: 800px;
+                    height: 500px;
+                }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Contact Us</h1>
+            
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="bay-of-islands.html">Bay of Islands</a>
+            <a href="rotorua.html">Rotorua</a>
+            <a href="fjordland.html">Fjordland</a>
+        </nav>
+        <aside>
+            <p class="quote">Greg is awesome</p>
+            <p class="credit">&mdash;Greg Hervey</p>
+        </aside>
+        <main>
+            <h1>Example headline</h1>
+            <form action="emailForm.php" method="POST">
+                <p>
+                    <label for="firstname">First Name:</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name"/>
+                </p>
+                <p>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name"/>
+                </p>
+                <p>
+                    <label for="mycheckbox">I am awesome</label>
+                    <input type="checkbox" id="mycheckbox">
+                </p>
+                <p>
+                    <label for="ddmenu">Please spam me: </label>
+                    <select name="spam" id="ddmenu">
+                        <option value="y">YES!</option>
+                        <option value="n">NO!</option>
+                        <option value="m">MAYBE, SOMETIMES!</option>
+                    </select>
+                </p>
+                <input type="submit"/>
+            </form>
+        </main>
+        <footer>
+            <p>&copy;2019 New Zealand Ministry of Tourism</p>
+        </footer>
+        <script>
+            Galleria.loadTheme("galleria/themes/classic/galleria.classic.min.js");
+            Galleria.run("#galleria");
+        </script>
+    </body>
+</html>

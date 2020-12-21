@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800|Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Nanum Gothic', 'Myriad Pro', sans-serif;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 200px 40px 1fr 40px;
+    grid-template-areas: "header header" "nav nav" "sidebar main" "footer footer";
+}
+
+/* layout*/
+
+header {
+    grid-area: header;
+    background-image: url("../images/NewZealand/fjordland.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+nav {
+    grid-area: nav;
+    background: linear-gradient(to bottom, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#959595+0,0d0d0d+46,010101+50,0a0a0a+53,4e4e4e+76,383838+87,1b1b1b+100;Black+Gloss+Pipe */
+    padding-left: 280px;
+
+}
+
+main {
+    grid-area: main;
+    padding: 1em 2em 1em 0;
+    column-count: 2;
+}
+
+aside {
+    font-family: 'Shadows Into Light', cursive;
+    padding: 2em;
+    color: #888;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #555;
+    color: #fff;
+    line-height: 40px;
+    padding-left: 300px;
+}
+
+/* Typography */
+
+header h1 {
+    color: #fff;
+    font-size: 2.75em;
+    text-shadow: 2px 3px 5px #000;
+    display: grid;
+}
+
+.quote {
+    font-size: 2em;
+    background: url(../images/NewZealand/open-quote.png) no-repeat, 
+    url(../images/NewZealand/close-quote.png) no-repeat right bottom;
+    padding: 12px 5px;
+}
+
+.credit {
+    text-align: right;
+}
+
+nav a {
+    color: #fff;
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-size: 1.33em;
+    font-weight: bold;
+    line-height: 40px;
+    text-decoration: none;
+    padding: 0 1em;
+}
+
+/*interaction*/
+
+nav a:hover {
+    background: linear-gradient(to bottom, #000 0%,#000 46%,#000 50%,#000 53%,#000 76%,#000 87%,#000 100%);
+
+}
+
+.elastic {
+    max-width: 100%;
+}
+
+figure {
+    break-inside: avoid;
+}
+
+@media only screen and (max-width: 830px) {
+    header h1{
+        left: 50px;
+    }
+    nav {
+        padding-left: 50px;
+    }
+    main {
+        column-count: 1;
+    }
+    body {
+        grid-template-columns: 1fr;
+    }
+    aside {
+        display: block;
+    }
+
+    @media only screen and (max-width: 596px) {
+        body{
+        grid-template-rows: 200px 80px 1fr 40px;
+        }
+    }
+}
