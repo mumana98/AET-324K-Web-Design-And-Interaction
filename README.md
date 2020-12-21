@@ -1,7 +1,7 @@
 # AET 324K Web Design And Interaction
 
 ![Project Image](./misc/Website_img.png)
-#### View it here: mumana98.github.io/Portfolio-Website-V2/
+#### View it here: mumana98.github.io/AET-324K-Web-Design-And-Interaction/
 ---
 
 ### Table of Contents
